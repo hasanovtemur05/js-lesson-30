@@ -1,0 +1,42 @@
+.here{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    &__title{
+        font-size: 28px;
+        color: #212326;
+    }
+    &__desc{
+        font-size: 14px;
+        color: #6B7177;
+    }
+    &__btn{
+        padding: 10px 20px;
+        color: white;
+        border-radius: 4px;
+        border: none;
+        background-color: #008060;
+        width: 180px;
+        transition: 0.4s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 10px gray;
+        }
+    }
+}
+@media(min-width:992px){
+    .here{
+        margin-top: 40px;
+        &__title{
+            font-size: 36px;
+        }
+        &__desc{
+            font-size: 18px;
+        }
+        &__btn{
+            font-size: 18px;
+        }
+    }
+}

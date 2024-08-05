@@ -1,0 +1,119 @@
+.pricing{
+    .box{
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        img{
+            transition: 0.4s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    margin-top: 40px;
+    &__title{
+        color: #212326;
+        font-size: 20px;
+    }
+    &__desc{
+        color: #6B7177;
+        font-size: 12px;
+    }
+    &__link{
+        color: #008060;
+        font-size: 12px;
+    }
+    #card1{
+        background-color: #FFF8F6;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    #card2{
+        background-color: #C6F0FC;
+        border-radius: 30px;
+        padding: 20px;
+    }
+   
+    
+    &__cards{
+        display: grid;
+        gap: 30px;
+    }
+    &__card{
+        display: grid;
+        gap: 30px;
+        img{
+            width: 100%;
+        }
+    }
+    #card2{
+        order: 2;
+    }
+}
+@media(min-width:700px){
+    .pricing{
+        &__cards{
+            display: grid;
+            gap: 100px;
+        }
+        .card__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+        }
+        .card__right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__card{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+           
+        }
+        &__title{
+            font-size: 28px;
+        }
+        &__desc{
+            font-size: 14px;
+        }
+        #card2{
+            order: 0;
+            padding: 50px;
+        }
+
+    }
+}
+@media(min-width:1200px){
+    .pricing{
+        .box{
+            margin-top: 60px;
+        }
+        margin-top: 120px;
+        &__title{
+            font-size: 34px;
+        }
+        &__desc{
+            font-size: 16px;
+        }
+        &__link{
+            font-size: 16px;
+        }
+        #card1{
+            padding: 40px;
+            img{
+                height: 400px;
+            }
+        }
+        #card3{
+            img{
+                height: 400px;
+            }
+        }
+    }
+   
+}

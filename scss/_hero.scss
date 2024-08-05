@@ -1,0 +1,115 @@
+.hero{
+    .container{
+        display: grid;
+        gap: 30px;
+    }
+    background-color: #002D2D;
+    &__left{
+        display: grid;
+        gap: 12px;
+        align-items: center;
+    }
+    &__title{
+        padding-top: 20px;
+        color: white;
+    }
+    &__desc{
+        font-size: 12px;
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    &__right{
+        img{
+            width: 100%;
+        }
+    }
+    .login{
+        display: flex;
+        gap: 15px;
+        input{
+            padding: 8px 8px;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+            font-size: 12px;
+            color:#42474C;
+        }
+    }
+    &__btn{
+        padding: 8px 7px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        background-color: #008060;
+        color: white;
+        transition: 0.4s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 10px gray;
+        }
+    }
+}
+@media (min-width:630px){
+    .hero{
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    }
+}
+@media(min-width:876px){
+    .hero{
+        &__title{
+            font-size:34px;
+        }
+        &__desc{
+            font-size: 14px;
+        }
+        &__btn{
+            padding: 8px 20px;
+        }
+    }
+}
+@media(min-width:992px){
+    .hero{
+        &__title{
+            font-size:44px;
+        }
+        &__desc{
+            font-size: 16px;
+        }
+        .login{
+            input{
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+        }
+        &__btn{
+            padding: 10px 25px;
+            font-size: 16px;
+        }
+    }
+}
+@media(min-width:1200px){
+    .hero{
+        &__title{
+            font-size:58px;
+        }
+        &__desc{
+            font-size: 20px;
+        }
+        .login{
+            input{
+                padding: 12px 15px;
+                font-size: 17px;
+            }
+        }
+        &__btn{
+            padding: 12px 25px;
+            font-size: 18px;
+        }
+    }
+}

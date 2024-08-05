@@ -1,0 +1,130 @@
+.header__box{
+    display: none;
+}
+.header{
+    height: 40px;
+    background-color: #002D2D;
+    position: sticky;
+    left: 0;
+    top: 0;
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__item{
+        position: relative;
+        &::after{
+            content: "";
+            height: 2px;
+            width: 0;
+            background-color: white;
+           position: absolute;
+           left: 0;
+           bottom: -7px;
+           transition: 0.4s;
+        }
+        &:hover::after{
+            width: 100%;
+            
+        }
+    }
+    #hamburger{
+        width: 17px;
+        height: 17px;
+    }
+    #logo{
+        height: 25px;
+    }
+    &__list{
+        display: none;
+    }
+    &__link{
+        color: white;
+    }
+    &__btn{
+        display: none;
+    }
+}
+@media(min-width:876px){
+    .header{
+        height: 50px;
+        #logo{
+            height: 30px;
+        }
+        &__list{
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        &__left{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            height: 100%;
+        }
+        #hamburger{
+            display: none;
+        }
+    }
+}
+@media(min-width:1200px){
+    .header__box{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        background-color:#A5E3B9;
+    }
+    .header{
+        height: 80px;
+        #logo{
+            height: 40px;
+        }
+        &__list{
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        &__left{
+            gap: 45px;
+        }
+        &__right{
+            display: flex;
+            gap: 35px;
+        }
+       &__btn{
+            display: flex;
+            padding: 10px 20px;
+            border-radius: 4px;
+            background-color: #008060;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-family: sans-serif;
+            transition: 0.4s;
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 5px 10px gray;
+            }
+       }
+    }
+}
+@media(min-width:1400px){
+    .header{
+        &__list{
+            display: flex;
+            gap: 55px;
+            align-items: center;
+        }
+        &__left{
+            gap: 65px;
+        }
+        &__right{
+            display: flex;
+            gap: 65px;
+        }
+       
+    }
+}
